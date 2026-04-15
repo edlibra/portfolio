@@ -1,0 +1,469 @@
+# Traductions françaises — edlynexavier.com
+# Langue principale du site.
+# Copyright (C) 2024 Edlyn Exavier
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: edlynexavier 1.0\n"
+"Report-Msgid-Bugs-To: hello@edlynexavier.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Edlyn Exavier <hello@edlynexavier.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# ── Navigation ────────────────────────────────────────────────────────────────
+msgid "Home"
+msgstr "Accueil"
+
+msgid "About"
+msgstr "À propos"
+
+msgid "Projects"
+msgstr "Projets"
+
+msgid "Skills"
+msgstr "Compétences"
+
+msgid "Resume"
+msgstr "CV"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Toggle navigation"
+msgstr "Ouvrir le menu"
+
+# ── Hero ──────────────────────────────────────────────────────────────────────
+msgid "Available for opportunities"
+msgstr "Disponible pour des opportunités"
+
+msgid "Engineering"
+msgstr "Ingénierie"
+
+msgid "Development"
+msgstr "Développement"
+
+msgid "Building"
+msgstr "Construction"
+
+msgid "Electronic Engineering Technology student & web developer crafting purposeful digital systems — from circuits to full-stack applications. Based in Canada. Thinking globally."
+msgstr "Étudiant en technologie du génie électronique et développeur web, je conçois des systèmes numériques utiles — des circuits aux applications full-stack. Basé au Canada. Ambition mondiale."
+
+msgid "View Projects"
+msgstr "Voir les projets"
+
+msgid "Get in Touch"
+msgstr "Me contacter"
+
+msgid "Download CV"
+msgstr "Télécharger le CV"
+
+msgid "Years coding"
+msgstr "Ans de code"
+
+msgid "Projects built"
+msgstr "Projets réalisés"
+
+msgid "Full"
+msgstr "Full"
+
+msgid "Stack capable"
+msgstr "Stack capable"
+
+msgid "Scroll"
+msgstr "Défiler"
+
+# ── About quick (homepage) ────────────────────────────────────────────────────
+msgid "Who I Am"
+msgstr "Qui suis-je"
+
+msgid "Building at the intersection of"
+msgstr "Je construis à l'intersection de"
+
+msgid "engineering & code"
+msgstr "l'ingénierie et du code"
+
+msgid "I'm Edlyn Exavier — a driven Engineering Technology student with a strong passion for web development, embedded systems, and building tools that solve real problems. I bring a builder's mindset to everything I create: clean code, thoughtful design, and systems that actually work."
+msgstr "Je suis Edlyn Exavier — étudiant en technologie du génie électronique, passionné par le développement web, les systèmes embarqués et la création d'outils qui résolvent de vrais problèmes. J'apporte une vision de bâtisseur à tout ce que je crée : code propre, design réfléchi et systèmes qui fonctionnent vraiment."
+
+msgid "Learn more about me"
+msgstr "En savoir plus sur moi"
+
+msgid "Web Development"
+msgstr "Développement web"
+
+msgid "Full-stack applications with Django, Python, and modern frontend technologies."
+msgstr "Applications full-stack avec Django, Python et les technologies frontend modernes."
+
+msgid "Electronics & Embedded"
+msgstr "Électronique et embarqué"
+
+msgid "Circuit design, microcontrollers, and hardware-software integration."
+msgstr "Conception de circuits, microcontrôleurs et intégration matériel-logiciel."
+
+msgid "IT & Systems"
+msgstr "Informatique et systèmes"
+
+msgid "Technical support, networking, Linux administration, and system design."
+msgstr "Support technique, réseaux, administration Linux et architecture systèmes."
+
+msgid "Problem Solving"
+msgstr "Résolution de problèmes"
+
+msgid "Engineering-first approach to breaking down and solving complex challenges."
+msgstr "Approche ingénierie pour analyser et résoudre des problèmes complexes."
+
+# ── Skills homepage ───────────────────────────────────────────────────────────
+msgid "What I Know"
+msgstr "Ce que je maîtrise"
+
+msgid "Technical Skills"
+msgstr "Compétences techniques"
+
+msgid "A curated view of my core technical stack."
+msgstr "Un aperçu de mes technologies principales."
+
+msgid "View all skills"
+msgstr "Voir toutes les compétences"
+
+# ── Projects homepage ─────────────────────────────────────────────────────────
+msgid "What I Build"
+msgstr "Ce que je construis"
+
+msgid "Featured Projects"
+msgstr "Projets mis en avant"
+
+msgid "All projects"
+msgstr "Tous les projets"
+
+msgid "View Project"
+msgstr "Voir le projet"
+
+msgid "Projects coming soon."
+msgstr "Projets à venir."
+
+# ── CTA section ───────────────────────────────────────────────────────────────
+msgid "Let's build something meaningful together."
+msgstr "Construisons quelque chose de concret ensemble."
+
+msgid "Open to internship opportunities, freelance projects, and meaningful technical collaborations."
+msgstr "Ouvert aux stages, projets freelance et collaborations techniques enrichissantes."
+
+msgid "Start a Conversation"
+msgstr "Démarrer une conversation"
+
+msgid "View Resume"
+msgstr "Voir le CV"
+
+# ── About page ────────────────────────────────────────────────────────────────
+msgid "Get to Know Me"
+msgstr "Apprenez à me connaître"
+
+msgid "About Edlyn"
+msgstr "À propos d'Edlyn"
+
+msgid "The story behind the code."
+msgstr "L'histoire derrière le code."
+
+msgid "Download CV"
+msgstr "Télécharger le CV"
+
+msgid "My Story"
+msgstr "Mon parcours"
+
+msgid "What I Build"
+msgstr "Ce que je construis"
+
+msgid "My Journey"
+msgstr "Mon chemin"
+
+msgid "What I'm Looking For"
+msgstr "Ce que je recherche"
+
+msgid "Let's Talk"
+msgstr "Discutons"
+
+msgid "I'm available for internship opportunities, freelance work, collaborations, and interesting conversations about technology and engineering."
+msgstr "Je suis disponible pour des stages, du travail freelance, des collaborations et des conversations enrichissantes sur la technologie et l'ingénierie."
+
+msgid "Internships"
+msgstr "Stages"
+
+msgid "Freelance Dev"
+msgstr "Dev freelance"
+
+msgid "Technical Collaborations"
+msgstr "Collaborations techniques"
+
+msgid "Open Source"
+msgstr "Open Source"
+
+# ── Skills page ───────────────────────────────────────────────────────────────
+msgid "My Technical Stack"
+msgstr "Ma stack technique"
+
+msgid "Technologies, tools, and domains I work with."
+msgstr "Technologies, outils et domaines avec lesquels je travaille."
+
+msgid "Also Familiar With"
+msgstr "Également à l'aise avec"
+
+msgid "Beginner"
+msgstr "Débutant"
+
+msgid "Elementary"
+msgstr "Élémentaire"
+
+msgid "Intermediate"
+msgstr "Intermédiaire"
+
+msgid "Advanced"
+msgstr "Avancé"
+
+msgid "Expert"
+msgstr "Expert"
+
+# ── Resume page ───────────────────────────────────────────────────────────────
+msgid "Professional Background"
+msgstr "Parcours professionnel"
+
+msgid "Download PDF"
+msgstr "Télécharger PDF"
+
+msgid "Education"
+msgstr "Formation"
+
+msgid "Experience"
+msgstr "Expérience"
+
+msgid "Certifications"
+msgstr "Certifications"
+
+msgid "Core Skills"
+msgstr "Compétences principales"
+
+msgid "Languages"
+msgstr "Langues"
+
+msgid "Interests"
+msgstr "Intérêts"
+
+msgid "English — Professional"
+msgstr "Anglais — Professionnel"
+
+msgid "French — Professional"
+msgstr "Français — Professionnel"
+
+msgid "Haitian Creole — Native"
+msgstr "Créole haïtien — Natif"
+
+msgid "Open Source Development"
+msgstr "Développement open source"
+
+msgid "Embedded IoT Systems"
+msgstr "Systèmes IoT embarqués"
+
+msgid "Clean Architecture"
+msgstr "Architecture propre"
+
+msgid "Developer Experience"
+msgstr "Expérience développeur"
+
+# ── Contact page ──────────────────────────────────────────────────────────────
+msgid "Get in Touch"
+msgstr "Prendre contact"
+
+msgid "Have a project, opportunity, or question? I'd love to hear from you."
+msgstr "Un projet, une opportunité ou une question ? Je serais ravi d'en discuter."
+
+msgid "Let's Connect"
+msgstr "Connectons-nous"
+
+msgid "I'm available for internship opportunities, freelance projects, technical collaborations, and any conversation about building meaningful things with technology."
+msgstr "Je suis disponible pour des stages, des projets freelance, des collaborations techniques et toute discussion autour de la création de choses utiles avec la technologie."
+
+msgid "Email"
+msgstr "Courriel"
+
+msgid "Location"
+msgstr "Localisation"
+
+msgid "Canada — Open to remote"
+msgstr "Canada — Ouvert au télétravail"
+
+msgid "Response time"
+msgstr "Délai de réponse"
+
+msgid "Usually within 24–48 hours"
+msgstr "Généralement sous 24 à 48 heures"
+
+msgid "Available for new opportunities"
+msgstr "Disponible pour de nouvelles opportunités"
+
+msgid "Full Name"
+msgstr "Nom complet"
+
+msgid "Your full name"
+msgstr "Votre nom complet"
+
+msgid "Email Address"
+msgstr "Adresse courriel"
+
+msgid "What is this about?"
+msgstr "De quoi s'agit-il ?"
+
+msgid "Subject"
+msgstr "Sujet"
+
+msgid "Tell me about your project, opportunity, or question…"
+msgstr "Parlez-moi de votre projet, opportunité ou question…"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+msgid "Your information is never shared with third parties."
+msgstr "Vos informations ne sont jamais partagées avec des tiers."
+
+msgid "There was an issue with your submission. Please check the form below."
+msgstr "Un problème est survenu. Veuillez vérifier le formulaire ci-dessous."
+
+msgid "Thank you for reaching out! I received your message and will get back to you as soon as possible."
+msgstr "Merci de m'avoir contacté ! J'ai bien reçu votre message et vous répondrai dans les plus brefs délais."
+
+msgid "Spam detected."
+msgstr "Spam détecté."
+
+msgid "Your message is too short. Please provide more detail (at least 20 characters)."
+msgstr "Votre message est trop court. Veuillez fournir plus de détails (au moins 20 caractères)."
+
+# ── Footer ────────────────────────────────────────────────────────────────────
+msgid "Quick Links"
+msgstr "Liens rapides"
+
+msgid "Connect"
+msgstr "Réseaux"
+
+msgid "Built with"
+msgstr "Créé avec"
+
+msgid "love"
+msgstr "amour"
+
+msgid "All rights reserved."
+msgstr "Tous droits réservés."
+
+# ── Error pages ───────────────────────────────────────────────────────────────
+msgid "Page Not Found"
+msgstr "Page introuvable"
+
+msgid "The page you're looking for doesn't exist, was moved, or the URL may have changed."
+msgstr "La page que vous cherchez n'existe pas, a été déplacée, ou l'URL a changé."
+
+msgid "Back to Home"
+msgstr "Retour à l'accueil"
+
+msgid "Server Error"
+msgstr "Erreur serveur"
+
+msgid "Something went wrong on our end. The issue has been noted. Please try again in a moment."
+msgstr "Une erreur s'est produite de notre côté. Le problème a été signalé. Veuillez réessayer dans un instant."
+
+# ── Project detail ────────────────────────────────────────────────────────────
+msgid "View Live"
+msgstr "Voir en ligne"
+
+msgid "Source Code"
+msgstr "Code source"
+
+msgid "About This Project"
+msgstr "À propos de ce projet"
+
+msgid "Project Info"
+msgstr "Informations"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Tech Stack"
+msgstr "Stack technique"
+
+msgid "Repository"
+msgstr "Dépôt"
+
+msgid "Live URL"
+msgstr "URL en ligne"
+
+msgid "Author"
+msgstr "Auteur"
+
+msgid "Completed"
+msgstr "Terminé"
+
+msgid "In Progress"
+msgstr "En cours"
+
+msgid "Archived"
+msgstr "Archivé"
+
+msgid "Discuss This Project"
+msgstr "Discuter de ce projet"
+
+msgid "Related Projects"
+msgstr "Projets similaires"
+
+msgid "Back to Projects"
+msgstr "Retour aux projets"
+
+msgid "In Progress"
+msgstr "En cours"
+
+msgid "View Detail"
+msgstr "Voir le détail"
+
+# ── Language switcher ─────────────────────────────────────────────────────────
+msgid "Language"
+msgstr "Langue"
+
+msgid "Switch language"
+msgstr "Changer la langue"
+
+msgid "Français"
+msgstr "Français"
+
+msgid "English"
+msgstr "English"
+
+msgid "Close"
+msgstr "Fermer"
+
+msgid "Breadcrumb"
+msgstr "Fil d'Ariane"
+
+msgid "Skip to main content"
+msgstr "Aller au contenu principal"
+
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+msgid "All"
+msgstr "Tous"
+
+msgid "Present"
+msgstr "Présent"
+
+msgid "Timeline"
+msgstr "Chronologie"
+
+msgid "Visit Site"
+msgstr "Voir le site"
+
+msgid "French"
+msgstr "Français"

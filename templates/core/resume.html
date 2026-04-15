@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+<section class="page-header" aria-labelledby="page-heading">
+  <div class="page-header-bg" aria-hidden="true"><div class="hero-glow hero-glow--1"></div></div>
+  <div class="container d-flex justify-content-between align-items-end flex-wrap gap-3">
+    <div>
+      <span class="section-eyebrow">{% trans "Professional Background" %}</span>
+      <h1 id="page-heading" class="page-title mb-0">{% trans "Resume" %}</h1>
+    </div>
+    <a href="{% static 'files/edlyn-exavier-cv.pdf' %}" download class="btn btn-hero-primary">
+      <i class="bi bi-download me-2" aria-hidden="true"></i>{% trans "Download PDF" %}
+    </a>
+  </div>
+</section>
+
+<section class="section-resume" aria-label="{% trans 'Resume content' %}">
+  <div class="container">
+    <div class="resume-layout">
+
+      <div class="resume-main">
+        {% for section in resume_sections %}
+        <div class="resume-section" data-animate>
+          <h2 class="resume-section-title">
+            <span class="resume-section-icon" aria-hidden="true">
+              {% if 'Edu' in section.title or 'Form' in section.title %}<i class="bi bi-mortarboard"></i>
+              {% elif 'Exp' in section.title or 'Prat' in section.title %}<i class="bi bi-briefcase"></i>
+              {% elif 'Cert' in section.title %}<i class="bi bi-patch-check"></i>
+              {% else %}<i class="bi bi-star"></i>{% endif %}
+            </span>
+            {{ section.title }}
+          </h2>
+          {% for item in section.items.all %}{% if item.is_active %}
+          <article class="resume-item">
+            <div class="resume-item-header">
+              <div>
+                <h3 class="resume-item-title">{{ item.title }}</h3>
+                {% if item.subtitle %}<p class="resume-item-sub">{{ item.subtitle }}</p>{% endif %}
+              </div>
+              <div class="resume-item-meta">
+                {% if item.date_range %}<span class="resume-date"><i class="bi bi-calendar3 me-1"></i>{{ item.date_range }}</span>{% endif %}
+                {% if item.location %}<span class="resume-location"><i class="bi bi-geo-alt me-1"></i>{{ item.location }}</span>{% endif %}
+              </div>
+            </div>
+            {% if item.description %}<p class="resume-item-desc">{{ item.description }}</p>{% endif %}
+          </article>
+          {% endif %}{% endfor %}
+        </div>
+        {% empty %}
+        <div class="resume-section">
+          <h2 class="resume-section-title"><span class="resume-section-icon"><i class="bi bi-mortarboard"></i></span>{% trans "Education" %}</h2>
+          <article class="resume-item">
+            <div class="resume-item-header">
+              <div><h3 class="resume-item-title">Electronic Engineering Technology</h3><p class="resume-item-sub">Canada</p></div>
+              <div class="resume-item-meta"><span class="resume-date"><i class="bi bi-calendar3 me-1"></i>2022 – {% trans "Present" %}</span></div>
+            </div>
+          </article>
+        </div>
+        {% endfor %}
+      </div>
+
+      <aside class="resume-sidebar">
+        <div class="resume-sidebar-section">
+          <h2 class="resume-sidebar-title">{% trans "Core Skills" %}</h2>
+          <ul class="resume-skill-list">
+            <li>Python / Django</li><li>JavaScript / Bootstrap 5</li>
+            <li>HTML5 / CSS3</li><li>PostgreSQL / SQLite</li>
+            <li>REST API Design</li><li>Git / GitHub</li>
+            <li>Linux / Bash</li><li>Electronics &amp; CAD</li>
+            <li>Embedded Systems</li><li>IT Support &amp; Networking</li>
+          </ul>
+        </div>
+        <div class="resume-sidebar-section">
+          <h2 class="resume-sidebar-title">{% trans "Languages" %}</h2>
+          <ul class="resume-skill-list">
+            <li>{% trans "English — Professional" %}</li>
+            <li>{% trans "French — Professional" %}</li>
+            <li>{% trans "Haitian Creole — Native" %}</li>
+          </ul>
+        </div>
+        <div class="resume-sidebar-section">
+          <h2 class="resume-sidebar-title">{% trans "Interests" %}</h2>
+          <ul class="resume-skill-list">
+            <li>{% trans "Open Source Development" %}</li>
+            <li>{% trans "Embedded IoT Systems" %}</li>
+            <li>{% trans "Clean Architecture" %}</li>
+            <li>{% trans "Developer Experience" %}</li>
+          </ul>
+        </div>
+        <a href="{% static 'files/edlyn-exavier-cv.pdf' %}" download class="btn btn-outline-accent w-100 mt-4">
+          <i class="bi bi-download me-2" aria-hidden="true"></i>{% trans "Download PDF" %}
+        </a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

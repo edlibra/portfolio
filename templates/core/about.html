@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+<section class="page-header" aria-labelledby="page-heading">
+  <div class="page-header-bg" aria-hidden="true"><div class="hero-glow hero-glow--1"></div></div>
+  <div class="container">
+    <span class="section-eyebrow">{% trans "Get to Know Me" %}</span>
+    <h1 id="page-heading" class="page-title">{% trans "About Edlyn" %}</h1>
+    <p class="page-subtitle">{% trans "The story behind the code." %}</p>
+  </div>
+</section>
+
+<section class="section-about" aria-label="{% trans 'About Edlyn Exavier' %}">
+  <div class="container">
+    <div class="about-main-grid">
+
+      <aside class="about-aside">
+        <div class="about-photo-wrap">
+          <img src="{% static 'images/profile.jpg' %}" alt="Edlyn Exavier"
+               width="400" height="400" class="about-photo"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="about-photo-placeholder" style="display:none;"><i class="bi bi-person-fill"></i></div>
+        </div>
+        <div class="about-info-card">
+          <div class="info-row"><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Canada</span></div>
+          <div class="info-row"><i class="bi bi-mortarboard" aria-hidden="true"></i><span>Electronic Engineering Technology</span></div>
+          <div class="info-row"><i class="bi bi-translate" aria-hidden="true"></i><span>{% trans "English" %}, {% trans "French" %}, Créole haïtien</span></div>
+          <div class="info-row"><i class="bi bi-envelope" aria-hidden="true"></i><a href="mailto:{{ CONTACT_EMAIL }}">{{ CONTACT_EMAIL }}</a></div>
+          <div class="about-social-links mt-3">
+            {% for link in global_social_links %}
+            <a href="{{ link.url }}" class="about-social-link" aria-label="{{ link.label }}"
+               {% if not link.platform == 'email' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              <i class="{{ link.icon_class }}" aria-hidden="true"></i>
+            </a>
+            {% endfor %}
+          </div>
+          <a href="{% static 'files/edlyn-exavier-cv.pdf' %}" download class="btn btn-primary-outline w-100 mt-3">
+            <i class="bi bi-download me-2" aria-hidden="true"></i>{% trans "Download CV" %}
+          </a>
+        </div>
+      </aside>
+
+      <div class="about-body">
+
+        <div class="about-block" data-animate>
+          <h2 class="about-section-title">{% trans "My Story" %}</h2>
+          <p>{% blocktrans %}I'm Edlyn Exavier — an Electronic Engineering Technology student driven by a deep curiosity about how technology shapes the world. From a young age, I've been fascinated by systems: how things connect, how they fail, and how to build them better. That mindset now lives at the center of everything I do.{% endblocktrans %}</p>
+          <p>{% blocktrans %}My academic background in Electronic Engineering Technology has given me a solid foundation in both the theoretical and practical aspects of electronics — circuit analysis, embedded systems, and signal processing. But alongside that, I've been developing a strong profile in software development, particularly backend web development with Python and Django.{% endblocktrans %}</p>
+          <p>{% blocktrans %}I believe in building things that matter. Whether that's a well-engineered web application, a reliable embedded system, or a clean IT infrastructure — I bring the same level of attention and ambition to every project.{% endblocktrans %}</p>
+        </div>
+
+        <div class="about-block" data-animate>
+          <h2 class="about-section-title">{% trans "What I Build" %}</h2>
+          <div class="build-grid">
+            <div class="build-item"><i class="bi bi-globe2" aria-hidden="true"></i>
+              <div><h3>{% trans "Web Development" %}</h3><p>{% trans "Full-stack applications with Django, Python, and modern frontend technologies." %}</p></div>
+            </div>
+            <div class="build-item"><i class="bi bi-cpu" aria-hidden="true"></i>
+              <div><h3>{% trans "Electronics & Embedded" %}</h3><p>{% trans "Circuit design, microcontrollers, and hardware-software integration." %}</p></div>
+            </div>
+            <div class="build-item"><i class="bi bi-hdd-network" aria-hidden="true"></i>
+              <div><h3>{% trans "IT & Systems" %}</h3><p>{% trans "Technical support, networking, Linux administration, and system design." %}</p></div>
+            </div>
+            <div class="build-item"><i class="bi bi-terminal" aria-hidden="true"></i>
+              <div><h3>{% trans "Problem Solving" %}</h3><p>{% trans "Engineering-first approach to breaking down and solving complex challenges." %}</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-block" data-animate>
+          <h2 class="about-section-title">{% trans "My Journey" %}</h2>
+          <ol class="timeline" aria-label="{% trans 'Timeline' %}">
+            <li class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2022 – {% trans "Present" %}</span>
+                <h3 class="timeline-title">Electronic Engineering Technology</h3>
+                <p class="timeline-desc">{% blocktrans %}Diploma program covering circuit design, embedded systems, power electronics, and technical project management.{% endblocktrans %}</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2021 – {% trans "Present" %}</span>
+                <h3 class="timeline-title">{% blocktrans %}Self-taught Web Developer{% endblocktrans %}</h3>
+                <p class="timeline-desc">{% blocktrans %}Intensively building skills in Python, Django, JavaScript, and full-stack web development. Completed multiple real-world projects from conception to deployment.{% endblocktrans %}</p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2020 – 2022</span>
+                <h3 class="timeline-title">{% trans "IT & Systems" %}</h3>
+                <p class="timeline-desc">{% blocktrans %}Hands-on experience in technical support, hardware troubleshooting, network configuration, and IT infrastructure management.{% endblocktrans %}</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="about-block" data-animate>
+          <h2 class="about-section-title">{% trans "What I'm Looking For" %}</h2>
+          <p>{% trans "I'm available for internship opportunities, freelance work, collaborations, and interesting conversations about technology and engineering." %}</p>
+          <div class="opportunity-tags">
+            <span class="opp-tag"><i class="bi bi-briefcase me-1"></i>{% trans "Internships" %}</span>
+            <span class="opp-tag"><i class="bi bi-code-slash me-1"></i>{% trans "Freelance Dev" %}</span>
+            <span class="opp-tag"><i class="bi bi-people me-1"></i>{% trans "Technical Collaborations" %}</span>
+            <span class="opp-tag"><i class="bi bi-lightning-charge me-1"></i>{% trans "Open Source" %}</span>
+          </div>
+          <div class="mt-4">
+            <a href="{% url 'contact:contact' %}" class="btn btn-hero-primary">
+              <i class="bi bi-send me-2" aria-hidden="true"></i>{% trans "Let's Talk" %}
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

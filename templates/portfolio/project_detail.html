@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block json_ld %}
+{% if json_ld %}<script type="application/ld+json">{{ json_ld|safe }}</script>{% endif %}
+{% endblock %}
+
+{% block content %}
+
+{% include 'partials/_breadcrumbs.html' %}
+
+<section class="project-detail-header" aria-labelledby="project-heading">
+  <div class="container">
+    <div class="project-detail-meta">
+      {% for tag in project.tags.all %}<span class="project-tag">{{ tag.name }}</span>{% endfor %}
+      {% if project.status == 'in_progress' %}<span class="project-tag project-tag--wip">{% trans "In Progress" %}</span>{% endif %}
+    </div>
+    <h1 id="project-heading" class="project-detail-title">{{ project.title }}</h1>
+    {% if project.tagline %}<p class="project-detail-tagline">{{ project.tagline }}</p>{% endif %}
+    <div class="project-detail-actions">
+      {% if project.live_url %}
+      <a href="{{ project.live_url }}" class="btn btn-hero-primary" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-box-arrow-up-right me-2" aria-hidden="true"></i>{% trans "View Live" %}
+      </a>
+      {% endif %}
+      {% if project.github_url %}
+      <a href="{{ project.github_url }}" class="btn btn-hero-secondary" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github me-2" aria-hidden="true"></i>{% trans "Source Code" %}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% if project.cover_image %}
+<div class="project-cover-wrap">
+  <div class="container">
+    <img src="{{ project.cover_image_url }}" alt="{{ project.title }}"
+         class="project-cover-img" width="1200" height="630" loading="eager" />
+  </div>
+</div>
+{% endif %}
+
+<section class="section-project-detail" aria-label="{% trans 'Project details' %}">
+  <div class="container">
+    <div class="project-detail-grid">
+
+      <div class="project-detail-body">
+        <h2 class="project-section-heading">{% trans "About This Project" %}</h2>
+        <div class="project-description">{{ project.description|linebreaks }}</div>
+      </div>
+
+      <aside class="project-detail-sidebar">
+        <div class="project-info-card">
+          <h2 class="project-info-title">{% trans "Project Info" %}</h2>
+          <div class="project-info-row">
+            <span class="info-label">{% trans "Status" %}</span>
+            <span class="info-value status-badge status-{{ project.status }}">{{ project.get_status_display }}</span>
+          </div>
+          {% if project.tags.exists %}
+          <div class="project-info-row">
+            <span class="info-label">{% trans "Tech Stack" %}</span>
+            <div class="info-value project-detail-tags">
+              {% for tag in project.tags.all %}<span class="project-tag">{{ tag.name }}</span>{% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          {% if project.github_url %}
+          <div class="project-info-row">
+            <span class="info-label">{% trans "Repository" %}</span>
+            <a href="{{ project.github_url }}" class="info-link" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github me-1" aria-hidden="true"></i>GitHub
+            </a>
+          </div>
+          {% endif %}
+          {% if project.live_url %}
+          <div class="project-info-row">
+            <span class="info-label">{% trans "Live URL" %}</span>
+            <a href="{{ project.live_url }}" class="info-link" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-globe2 me-1" aria-hidden="true"></i>{% trans "Visit Site" %}
+            </a>
+          </div>
+          {% endif %}
+          <div class="project-info-row">
+            <span class="info-label">{% trans "Author" %}</span>
+            <span class="info-value">Edlyn Exavier</span>
+          </div>
+        </div>
+        <a href="{% url 'contact:contact' %}" class="btn btn-outline-accent w-100 mt-3">
+          <i class="bi bi-send me-2" aria-hidden="true"></i>{% trans "Discuss This Project" %}
+        </a>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+{% if related_projects %}
+<section class="section-related" aria-labelledby="related-heading">
+  <div class="container">
+    <h2 id="related-heading" class="section-title mb-5">{% trans "Related Projects" %}</h2>
+    <div class="projects-grid">
+      {% for rel in related_projects %}
+      <article class="project-card" aria-labelledby="rel-{{ rel.pk }}">
+        <a href="{{ rel.get_absolute_url }}" class="project-card-link" tabindex="-1" aria-hidden="true">
+          <div class="project-card-img-wrap">
+            <img src="{{ rel.cover_image_url }}" alt="{{ rel.title }}"
+                 class="project-card-img" loading="lazy" width="600" height="340" />
+            <div class="project-card-overlay"><span>{% trans "View Project" %}</span></div>
+          </div>
+        </a>
+        <div class="project-card-body">
+          <div class="project-card-tags">{% for tag in rel.tags.all|slice:":3" %}<span class="project-tag">{{ tag.name }}</span>{% endfor %}</div>
+          <h3 id="rel-{{ rel.pk }}" class="project-card-title"><a href="{{ rel.get_absolute_url }}">{{ rel.title }}</a></h3>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="container pb-5">
+  <a href="{% url 'portfolio:projects' %}" class="link-arrow-back">
+    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i>{% trans "Back to Projects" %}
+  </a>
+</div>
+
+{% endblock %}

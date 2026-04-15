@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+<section class="page-header" aria-labelledby="page-heading">
+  <div class="page-header-bg" aria-hidden="true"><div class="hero-glow hero-glow--1"></div></div>
+  <div class="container">
+    <span class="section-eyebrow">{% trans "Get in Touch" %}</span>
+    <h1 id="page-heading" class="page-title">{% trans "Contact" %}</h1>
+    <p class="page-subtitle">{% trans "Have a project, opportunity, or question? I'd love to hear from you." %}</p>
+  </div>
+</section>
+
+<section class="section-contact" aria-label="{% trans 'Contact section' %}">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info" data-animate>
+        <h2 class="contact-info-title">{% trans "Let's Connect" %}</h2>
+        <p>{% trans "I'm available for internship opportunities, freelance projects, technical collaborations, and any conversation about building meaningful things with technology." %}</p>
+
+        <div class="contact-detail-list">
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-detail-label">{% trans "Email" %}</span>
+              <a href="mailto:{{ CONTACT_EMAIL }}" class="contact-detail-value">{{ CONTACT_EMAIL }}</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-detail-label">{% trans "Location" %}</span>
+              <span class="contact-detail-value">{% trans "Canada — Open to remote" %}</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><i class="bi bi-clock-fill" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-detail-label">{% trans "Response time" %}</span>
+              <span class="contact-detail-value">{% trans "Usually within 24–48 hours" %}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-availability">
+          <div class="availability-dot" aria-hidden="true"></div>
+          <span>{% trans "Available for new opportunities" %}</span>
+        </div>
+
+        <div class="contact-social mt-4">
+          {% for link in global_social_links %}
+          <a href="{{ link.url }}" class="contact-social-link" aria-label="{{ link.label }}"
+             {% if not link.platform == 'email' %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            <i class="{{ link.icon_class }}" aria-hidden="true"></i>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="contact-form-wrap" data-animate>
+        <form method="post" class="contact-form" novalidate aria-label="{% trans 'Contact form' %}">
+          {% csrf_token %}
+          <div style="display:none;" aria-hidden="true">{{ form.website }}</div>
+
+          <div class="form-group mb-4">
+            <label for="{{ form.name.id_for_label }}" class="form-label">
+              {% trans "Full Name" %} <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            {{ form.name }}
+            {% if form.name.errors %}<div class="form-error"><i class="bi bi-exclamation-circle me-1"></i>{{ form.name.errors.0 }}</div>{% endif %}
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="{{ form.email.id_for_label }}" class="form-label">
+              {% trans "Email Address" %} <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            {{ form.email }}
+            {% if form.email.errors %}<div class="form-error"><i class="bi bi-exclamation-circle me-1"></i>{{ form.email.errors.0 }}</div>{% endif %}
+          </div>
+
+          <div class="form-group mb-4">
+            <label for="{{ form.subject.id_for_label }}" class="form-label">
+              {% trans "Subject" %} <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            {{ form.subject }}
+            {% if form.subject.errors %}<div class="form-error"><i class="bi bi-exclamation-circle me-1"></i>{{ form.subject.errors.0 }}</div>{% endif %}
+          </div>
+
+          <div class="form-group mb-5">
+            <label for="{{ form.message.id_for_label }}" class="form-label">
+              {% trans "Message" %} <span class="required-star" aria-hidden="true">*</span>
+            </label>
+            {{ form.message }}
+            {% if form.message.errors %}<div class="form-error"><i class="bi bi-exclamation-circle me-1"></i>{{ form.message.errors.0 }}</div>{% endif %}
+          </div>
+
+          <button type="submit" class="btn btn-hero-primary w-100 btn-submit">
+            <i class="bi bi-send me-2" aria-hidden="true"></i>{% trans "Send Message" %}
+          </button>
+
+          <p class="form-note mt-3">
+            <i class="bi bi-lock me-1" aria-hidden="true"></i>
+            {% trans "Your information is never shared with third parties." %}
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

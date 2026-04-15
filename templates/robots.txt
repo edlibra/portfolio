@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /media/private/
+
+# Sitemap
+Sitemap: https://edlynexavier.com/sitemap.xml

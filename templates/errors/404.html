@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}404 — {% trans "Page Not Found" %} | Edlyn Exavier{% endblock %}
+{% block robots %}noindex, nofollow{% endblock %}
+{% block content %}
+<section class="error-page" aria-labelledby="error-heading">
+  <div class="container text-center">
+    <div class="error-code" aria-hidden="true">404</div>
+    <h1 id="error-heading" class="error-title">{% trans "Page Not Found" %}</h1>
+    <p class="error-text">{% trans "The page you're looking for doesn't exist, was moved, or the URL may have changed." %}</p>
+    <div class="error-actions">
+      <a href="{% url 'core:home' %}" class="btn btn-hero-primary">
+        <i class="bi bi-house me-2" aria-hidden="true"></i>{% trans "Back to Home" %}
+      </a>
+      <a href="{% url 'portfolio:projects' %}" class="btn btn-hero-secondary">
+        <i class="bi bi-grid-3x3-gap me-2" aria-hidden="true"></i>{% trans "View Projects" %}
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

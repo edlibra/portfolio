@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block content %}
+
+{# ══ HERO ══════════════════════════════════════════════════════════════════ #}
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+
+      <div class="hero-badge" aria-hidden="true">
+        <span class="badge-dot"></span>
+        {% trans "Available for opportunities" %}
+      </div>
+
+      <h1 id="hero-heading" class="hero-title">
+        <span class="hero-name">Edlyn Exavier</span>
+        <span class="hero-rule" aria-hidden="true"></span>
+        <span class="hero-sub">
+          {% trans "Engineering" %}<span class="accent-slash"> / </span>{% trans "Development" %}<span class="accent-slash"> / </span>{% trans "Building" %}
+        </span>
+      </h1>
+
+      <p class="hero-description">
+        {% trans "Electronic Engineering Technology student & web developer crafting purposeful digital systems — from circuits to full-stack applications. Based in Canada. Thinking globally." %}
+      </p>
+
+      <div class="hero-actions">
+        <a href="{% url 'portfolio:projects' %}" class="btn btn-hero-primary">
+          <i class="bi bi-grid-3x3-gap me-2" aria-hidden="true"></i>{% trans "View Projects" %}
+        </a>
+        <a href="{% url 'contact:contact' %}" class="btn btn-hero-secondary">
+          <i class="bi bi-send me-2" aria-hidden="true"></i>{% trans "Get in Touch" %}
+        </a>
+        <a href="{% static 'files/edlyn-exavier-cv.pdf' %}" class="btn btn-hero-ghost" download>
+          <i class="bi bi-download me-2" aria-hidden="true"></i>{% trans "Download CV" %}
+        </a>
+      </div>
+
+      <div class="hero-stats" aria-label="Stats">
+        <div class="hero-stat">
+          <span class="stat-value">3+</span>
+          <span class="stat-label">{% trans "Years coding" %}</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-value">10+</span>
+          <span class="stat-label">{% trans "Projects built" %}</span>
+        </div>
+        <div class="hero-stat-divider" aria-hidden="true"></div>
+        <div class="hero-stat">
+          <span class="stat-value">{% trans "Full" %}</span>
+          <span class="stat-label">{% trans "Stack capable" %}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-avatar-wrap">
+        <div class="hero-avatar-ring hero-avatar-ring--outer"></div>
+        <div class="hero-avatar-ring hero-avatar-ring--inner"></div>
+        <div class="hero-avatar">
+          <img src="{% static 'images/profile.jpg' %}"
+               alt="Edlyn Exavier"
+               width="320" height="320"
+               class="hero-avatar-img"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="hero-avatar-placeholder" style="display:none;">
+            <i class="bi bi-person-fill"></i>
+          </div>
+        </div>
+        <div class="hero-float hero-float--1"><i class="bi bi-code-slash"></i></div>
+        <div class="hero-float hero-float--2"><i class="bi bi-cpu"></i></div>
+        <div class="hero-float hero-float--3"><i class="bi bi-lightning-charge"></i></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-line"></span>
+    <span class="scroll-label">{% trans "Scroll" %}</span>
+  </div>
+</section>
+
+
+{# ══ À PROPOS RAPIDE ══════════════════════════════════════════════════════ #}
+<section class="section-about-quick" aria-labelledby="about-quick-heading">
+  <div class="container">
+    <div class="about-quick-grid">
+      <div class="about-quick-text" data-animate>
+        <span class="section-eyebrow">{% trans "Who I Am" %}</span>
+        <h2 id="about-quick-heading" class="section-title">
+          {% trans "Building at the intersection of" %}<br>
+          <em>{% trans "engineering & code" %}</em>
+        </h2>
+        <p class="section-body">
+          {% trans "I'm Edlyn Exavier — a driven Engineering Technology student with a strong passion for web development, embedded systems, and building tools that solve real problems. I bring a builder's mindset to everything I create: clean code, thoughtful design, and systems that actually work." %}
+        </p>
+        <a href="{% url 'core:about' %}" class="link-arrow">
+          {% trans "Learn more about me" %} <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="about-quick-cards" aria-label="{% trans 'Core strengths' %}">
+        <div class="strength-card" data-animate data-delay="1">
+          <div class="strength-icon"><i class="bi bi-braces" aria-hidden="true"></i></div>
+          <h3>{% trans "Web Development" %}</h3>
+          <p>{% trans "Full-stack applications with Django, Python, and modern frontend technologies." %}</p>
+        </div>
+        <div class="strength-card" data-animate data-delay="2">
+          <div class="strength-icon"><i class="bi bi-cpu-fill" aria-hidden="true"></i></div>
+          <h3>{% trans "Electronics & Embedded" %}</h3>
+          <p>{% trans "Circuit design, microcontrollers, and hardware-software integration." %}</p>
+        </div>
+        <div class="strength-card" data-animate data-delay="3">
+          <div class="strength-icon"><i class="bi bi-tools" aria-hidden="true"></i></div>
+          <h3>{% trans "IT & Systems" %}</h3>
+          <p>{% trans "Technical support, networking, Linux administration, and system design." %}</p>
+        </div>
+        <div class="strength-card" data-animate data-delay="4">
+          <div class="strength-icon"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>
+          <h3>{% trans "Problem Solving" %}</h3>
+          <p>{% trans "Engineering-first approach to breaking down and solving complex challenges." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{# ══ COMPÉTENCES ══════════════════════════════════════════════════════════ #}
+<section class="section-skills-home" aria-labelledby="skills-home-heading">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-eyebrow">{% trans "What I Know" %}</span>
+      <h2 id="skills-home-heading" class="section-title">{% trans "Technical Skills" %}</h2>
+      <p class="section-subtitle">{% trans "A curated view of my core technical stack." %}</p>
+    </div>
+    {% if skill_categories %}
+    <div class="skills-grid-home">
+      {% for category in skill_categories %}
+      <div class="skill-category-card" data-animate>
+        <div class="skill-cat-header">
+          <i class="{{ category.icon_class }}" aria-hidden="true"></i>
+          <h3>{{ category.name }}</h3>
+        </div>
+        <ul class="skill-badges" role="list">
+          {% for skill in category.skills.all %}
+          {% if skill.is_active %}<li class="skill-badge">{{ skill.name }}</li>{% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="text-center mt-5">
+      <a href="{% url 'core:skills' %}" class="btn btn-outline-accent">
+        {% trans "View all skills" %} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{# ══ PROJETS VEDETTES ════════════════════════════════════════════════════ #}
+<section class="section-projects-home" aria-labelledby="projects-home-heading">
+  <div class="container">
+    <div class="section-header-flex">
+      <div>
+        <span class="section-eyebrow">{% trans "What I Build" %}</span>
+        <h2 id="projects-home-heading" class="section-title">{% trans "Featured Projects" %}</h2>
+      </div>
+      <a href="{% url 'portfolio:projects' %}" class="link-arrow d-none d-md-flex">
+        {% trans "All projects" %} <i class="bi bi-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="projects-grid">
+      {% for project in featured_projects %}
+      <article class="project-card" aria-labelledby="proj-{{ project.pk }}">
+        <a href="{{ project.get_absolute_url }}" class="project-card-link" tabindex="-1" aria-hidden="true">
+          <div class="project-card-img-wrap">
+            <img src="{{ project.cover_image_url }}" alt="{{ project.title }}"
+                 class="project-card-img" loading="lazy" width="600" height="340" />
+            <div class="project-card-overlay"><span>{% trans "View Project" %}</span></div>
+          </div>
+        </a>
+        <div class="project-card-body">
+          <div class="project-card-tags">
+            {% for tag in project.tags.all|slice:":3" %}
+            <span class="project-tag">{{ tag.name }}</span>
+            {% endfor %}
+          </div>
+          <h3 id="proj-{{ project.pk }}" class="project-card-title">
+            <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
+          </h3>
+          <p class="project-card-desc">{{ project.tagline|default:project.description|truncatewords:20 }}</p>
+          <div class="project-card-actions">
+            <a href="{{ project.get_absolute_url }}" class="btn btn-sm btn-project">
+              {% trans "View Detail" %} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+            </a>
+            {% if project.github_url %}
+            <a href="{{ project.github_url }}" class="btn btn-sm btn-project-ghost"
+               target="_blank" rel="noopener noreferrer" aria-label="GitHub — {{ project.title }}">
+              <i class="bi bi-github" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+            {% if project.live_url %}
+            <a href="{{ project.live_url }}" class="btn btn-sm btn-project-ghost"
+               target="_blank" rel="noopener noreferrer" aria-label="Demo — {{ project.title }}">
+              <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% empty %}
+      <p class="text-center text-muted col-12">{% trans "Projects coming soon." %}</p>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4 d-md-none">
+      <a href="{% url 'portfolio:projects' %}" class="btn btn-outline-accent">
+        {% trans "All projects" %} <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{# ══ CTA FINAL ════════════════════════════════════════════════════════════ #}
+<section class="section-cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-content">
+        <h2 id="cta-heading" class="cta-title">
+          {% trans "Let's build something meaningful together." %}
+        </h2>
+        <p class="cta-text">
+          {% trans "Open to internship opportunities, freelance projects, and meaningful technical collaborations." %}
+        </p>
+        <div class="cta-actions">
+          <a href="{% url 'contact:contact' %}" class="btn btn-cta-primary">
+            <i class="bi bi-send me-2" aria-hidden="true"></i>{% trans "Start a Conversation" %}
+          </a>
+          <a href="{% url 'core:resume' %}" class="btn btn-cta-secondary">
+            <i class="bi bi-file-person me-2" aria-hidden="true"></i>{% trans "View Resume" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

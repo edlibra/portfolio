@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Systemd service for edlynexavier.com (Gunicorn)
+# Place at: /etc/systemd/system/edlynexavier.service
+#
+# Then:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable edlynexavier
+#   sudo systemctl start edlynexavier
+#   sudo systemctl status edlynexavier
+# ─────────────────────────────────────────────────────────────────────────────
+
+[Unit]
+Description=Gunicorn daemon for edlynexavier.com
+After=network.target
+
+[Service]
+Type=notify
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/edlynexavier
+EnvironmentFile=/var/www/edlynexavier/.env
+ExecStart=/var/www/edlynexavier/venv/bin/gunicorn \
+    edlynexavier.wsgi:application \
+    --bind 127.0.0.1:8000 \
+    --workers 3 \
+    --worker-class sync \
+    --timeout 120 \
+    --keep-alive 5 \
+    --log-level info \
+    --access-logfile /var/log/gunicorn/edlynexavier_access.log \
+    --error-logfile /var/log/gunicorn/edlynexavier_error.log
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

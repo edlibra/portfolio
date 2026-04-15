@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static i18n core_tags %}
+
+{% block content %}
+
+<section class="page-header" aria-labelledby="page-heading">
+  <div class="page-header-bg" aria-hidden="true"><div class="hero-glow hero-glow--1"></div></div>
+  <div class="container">
+    <span class="section-eyebrow">{% trans "My Technical Stack" %}</span>
+    <h1 id="page-heading" class="page-title">{% trans "Skills" %}</h1>
+    <p class="page-subtitle">{% trans "Technologies, tools, and domains I work with." %}</p>
+  </div>
+</section>
+
+<section class="section-skills-full" aria-label="{% trans 'Full skills breakdown' %}">
+  <div class="container">
+
+    {% for category in skill_categories %}
+    <div class="skills-category-block" data-animate>
+      <div class="skills-cat-header">
+        <i class="{{ category.icon_class }}" aria-hidden="true"></i>
+        <h2>{{ category.name }}</h2>
+      </div>
+      <div class="skills-list">
+        {% for skill in category.skills.all %}
+        {% if skill.is_active %}
+        <div class="skill-row">
+          <div class="skill-meta">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-level-label">{{ skill.get_level_display }}</span>
+          </div>
+          <div class="skill-bar-wrap" role="progressbar"
+               aria-valuenow="{{ skill.level_percent }}"
+               aria-valuemin="0" aria-valuemax="100"
+               aria-label="{{ skill.name }} — {{ skill.level_percent }}%">
+            <div class="skill-bar" style="--skill-width: {{ skill.level_percent }}%"></div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% empty %}
+    <p class="text-center text-muted">{% trans "Skills coming soon." %}</p>
+    {% endfor %}
+
+    <div class="skills-extras" data-animate>
+      <h2 class="skills-cat-header-plain">{% trans "Also Familiar With" %}</h2>
+      <div class="skills-badge-cloud" role="list">
+        {% for badge in "Git,GitHub,Linux,Bash,REST APIs,PostgreSQL,SQLite,VS Code,Arduino,Raspberry Pi,Figma,Netlify,Docker,Nginx,Postman"|split %}
+        <span class="skill-cloud-badge" role="listitem">{{ badge }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

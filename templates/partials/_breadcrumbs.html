@@ -1,0 +1,25 @@
+{% load i18n %}
+{% if breadcrumbs %}
+<nav aria-label="{% trans 'Breadcrumb' %}" class="breadcrumb-nav">
+  <div class="container">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">{% trans "Home" %}</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      {% for crumb in breadcrumbs %}
+      <li class="breadcrumb-item {% if forloop.last %}active{% endif %}"
+          itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"
+          {% if forloop.last %}aria-current="page"{% endif %}>
+        {% if crumb.url and not forloop.last %}
+          <a href="{{ crumb.url }}" itemprop="item"><span itemprop="name">{{ crumb.label }}</span></a>
+        {% else %}
+          <span itemprop="name">{{ crumb.label }}</span>
+        {% endif %}
+        <meta itemprop="position" content="{{ forloop.counter|add:1 }}" />
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</nav>
+{% endif %}

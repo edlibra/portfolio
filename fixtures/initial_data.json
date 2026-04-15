@@ -1,0 +1,491 @@
+[
+  {
+    "model": "portfolio.skillcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Backend Development",
+      "icon_class": "bi-server",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skillcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Frontend Development",
+      "icon_class": "bi-window",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skillcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Tools & DevOps",
+      "icon_class": "bi-tools",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skillcategory",
+    "pk": 4,
+    "fields": {
+      "name": "Electronics & Systems",
+      "icon_class": "bi-cpu",
+      "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Python",
+      "level": 4,
+      "level_percent": 85,
+      "icon_class": "",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Django",
+      "level": 4,
+      "level_percent": 82,
+      "icon_class": "",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "REST API Design",
+      "level": 3,
+      "level_percent": 72,
+      "icon_class": "",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "PostgreSQL / SQLite",
+      "level": 3,
+      "level_percent": 70,
+      "icon_class": "",
+      "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "HTML5 / CSS3",
+      "level": 4,
+      "level_percent": 88,
+      "icon_class": "",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "name": "Bootstrap 5",
+      "level": 4,
+      "level_percent": 86,
+      "icon_class": "",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "name": "JavaScript (ES6+)",
+      "level": 3,
+      "level_percent": 70,
+      "icon_class": "",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "name": "Git & GitHub",
+      "level": 4,
+      "level_percent": 85,
+      "icon_class": "",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 9,
+    "fields": {
+      "category": 3,
+      "name": "Linux / Bash",
+      "level": 3,
+      "level_percent": 74,
+      "icon_class": "",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 10,
+    "fields": {
+      "category": 3,
+      "name": "Docker (basics)",
+      "level": 2,
+      "level_percent": 48,
+      "icon_class": "",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "Nginx / Gunicorn",
+      "level": 3,
+      "level_percent": 65,
+      "icon_class": "",
+      "order": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 12,
+    "fields": {
+      "category": 4,
+      "name": "Circuit Design & Analysis",
+      "level": 3,
+      "level_percent": 73,
+      "icon_class": "",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 13,
+    "fields": {
+      "category": 4,
+      "name": "Arduino / Embedded C",
+      "level": 3,
+      "level_percent": 68,
+      "icon_class": "",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 14,
+    "fields": {
+      "category": 4,
+      "name": "IT Support & Networking",
+      "level": 4,
+      "level_percent": 80,
+      "icon_class": "",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 1,
+    "fields": {
+      "name": "Python",
+      "slug": "python"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 2,
+    "fields": {
+      "name": "Django",
+      "slug": "django"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 3,
+    "fields": {
+      "name": "Bootstrap 5",
+      "slug": "bootstrap-5"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 4,
+    "fields": {
+      "name": "REST API",
+      "slug": "rest-api"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 5,
+    "fields": {
+      "name": "PostgreSQL",
+      "slug": "postgresql"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 6,
+    "fields": {
+      "name": "Arduino",
+      "slug": "arduino"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 7,
+    "fields": {
+      "name": "JavaScript",
+      "slug": "javascript"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 8,
+    "fields": {
+      "name": "HTML/CSS",
+      "slug": "html-css"
+    }
+  },
+  {
+    "model": "portfolio.projecttag",
+    "pk": 9,
+    "fields": {
+      "name": "SQLite",
+      "slug": "sqlite"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Personal Portfolio — edlynexavier.com",
+      "slug": "edlynexavier-portfolio",
+      "tagline": "My professional personal website, built from scratch with Django + Bootstrap 5.",
+      "description": "A fully custom personal portfolio site built from scratch using Django, Bootstrap 5, and PostgreSQL. This project is the reflection of my full-stack development ability.\n\nKey features include dynamic project management via Django Admin, SEO-optimised pages with JSON-LD structured data (Person, WebSite, SoftwareSourceCode), a functional contact form with honeypot anti-spam, breadcrumb navigation, sitemap.xml, robots.txt, and full production deployment configuration.\n\nThe frontend is built with a custom dark design system using CSS variables, Syne + DM Sans typography, smooth CSS animations, IntersectionObserver-driven scroll effects, and a fully responsive layout from mobile to desktop.\n\nDeployment-ready with WhiteNoise for static files, Gunicorn for WSGI, environment variable management via python-dotenv, and clean separation of dev/prod settings.",
+      "status": "completed",
+      "cover_image": "",
+      "github_url": "https://github.com/edlynexavier/portfolio",
+      "live_url": "https://edlynexavier.com",
+      "is_featured": true,
+      "is_active": true,
+      "order": 1,
+      "meta_description": "Personal portfolio of Edlyn Exavier — built with Django, Bootstrap 5, and PostgreSQL."
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "Inventory Management System",
+      "slug": "inventory-management-system",
+      "tagline": "A web-based stock and inventory tracking system for small businesses.",
+      "description": "A full-stack inventory management web application built with Django and PostgreSQL. Designed for small businesses needing a clean, reliable solution for tracking stock, suppliers, and purchase orders.\n\nFeatures include multi-user access with role-based permissions (admin, staff, viewer), real-time stock level tracking, low-stock alert thresholds, product category management, supplier records, CSV export functionality, and a responsive dashboard with Chart.js visualisations.\n\nThe application uses Django's class-based views, custom model managers for filtered queries, Django signals for alert triggers, and Bootstrap 5 for the responsive UI. Authentication is handled via Django's built-in auth system with custom permission decorators.",
+      "status": "completed",
+      "cover_image": "",
+      "github_url": "https://github.com/edlynexavier/inventory-system",
+      "live_url": "",
+      "is_featured": true,
+      "is_active": true,
+      "order": 2,
+      "meta_description": "Web-based inventory and stock management system built with Django and PostgreSQL."
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "IoT Temperature Monitor",
+      "slug": "iot-temperature-monitor",
+      "tagline": "Arduino-based ambient monitoring system with real-time web dashboard.",
+      "description": "A hardware + software bridge project combining an Arduino Uno microcontroller with DHT22 temperature/humidity sensors to monitor environmental conditions in real time.\n\nThe Arduino reads sensor data every 30 seconds and transmits it over serial USB to a lightweight Python backend server. The backend stores readings in a SQLite database and exposes a REST API. A minimal web dashboard (HTML, JS, Chart.js) displays live and historical data with configurable alert thresholds.\n\nKey technical components: Arduino firmware in C++, Python serial listener with pyserial, Flask-based REST API, SQLite for time-series storage, and a single-page dashboard with auto-refreshing charts. The system also includes a simple email alert system using smtplib when thresholds are exceeded.",
+      "status": "completed",
+      "cover_image": "",
+      "github_url": "https://github.com/edlynexavier/iot-temp-monitor",
+      "live_url": "",
+      "is_featured": true,
+      "is_active": true,
+      "order": 3,
+      "meta_description": "IoT temperature monitoring system combining Arduino sensors with a Python web dashboard."
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 4,
+    "fields": {
+      "title": "Task Manager CLI Tool",
+      "slug": "task-manager-cli",
+      "tagline": "A fast, keyboard-first command-line task manager built in Python.",
+      "description": "A command-line productivity tool for managing daily tasks, built entirely in Python with a clean, interactive interface using the Rich library for styled terminal output.\n\nSupports creating, listing, filtering, updating, and deleting tasks. Tasks are stored locally in a JSON file for portability. Features include priority levels (low, medium, high, urgent), due dates with overdue highlighting, category/tag filtering, and a summary dashboard view.\n\nBuilt as a learning project to explore CLI design patterns, argument parsing with argparse, and terminal UI composition with Rich. Published to PyPI as a personal open-source project.",
+      "status": "completed",
+      "cover_image": "",
+      "github_url": "https://github.com/edlynexavier/task-cli",
+      "live_url": "",
+      "is_featured": false,
+      "is_active": true,
+      "order": 4,
+      "meta_description": "Python command-line task manager with styled terminal output using the Rich library."
+    }
+  },
+  {
+    "model": "core.sociallink",
+    "pk": 1,
+    "fields": {
+      "platform": "github",
+      "label": "GitHub",
+      "url": "https://github.com/edlynexavier",
+      "icon_class": "bi-github",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.sociallink",
+    "pk": 2,
+    "fields": {
+      "platform": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/edlynexavier",
+      "icon_class": "bi-linkedin",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.sociallink",
+    "pk": 3,
+    "fields": {
+      "platform": "email",
+      "label": "Email",
+      "url": "mailto:hello@edlynexavier.com",
+      "icon_class": "bi-envelope-fill",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumesection",
+    "pk": 1,
+    "fields": {
+      "title": "Education",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumesection",
+    "pk": 2,
+    "fields": {
+      "title": "Experience",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumesection",
+    "pk": 3,
+    "fields": {
+      "title": "Certifications",
+      "order": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumeitem",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "title": "Diploma in Electronic Engineering Technology",
+      "subtitle": "College / Institution Name, Canada",
+      "location": "Canada",
+      "date_start": "Sept 2022",
+      "date_end": "Present",
+      "description": "Comprehensive program covering circuit design and analysis, embedded systems programming, power electronics, signals and systems, industrial automation, and technical project management. Consistent high academic performance with practical laboratory focus.",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumeitem",
+    "pk": 2,
+    "fields": {
+      "section": 2,
+      "title": "Full-Stack Web Developer",
+      "subtitle": "Freelance / Independent Projects",
+      "location": "Remote",
+      "date_start": "2021",
+      "date_end": "Present",
+      "description": "Designed and built multiple full-stack web applications from scratch using Python and Django. Implemented REST APIs, relational database schemas, user authentication, admin interfaces, and production deployments. Delivered projects on time with clean, maintainable codebases.",
+      "order": 1,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumeitem",
+    "pk": 3,
+    "fields": {
+      "section": 2,
+      "title": "IT Support Technician",
+      "subtitle": "Independent / Clients",
+      "location": "Canada",
+      "date_start": "2020",
+      "date_end": "2022",
+      "description": "Provided end-to-end technical support for hardware, software, and networking infrastructure. Configured routers and network switches, administered Linux and Windows servers, resolved complex system issues, and managed workstation deployments.",
+      "order": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "core.resumeitem",
+    "pk": 4,
+    "fields": {
+      "section": 3,
+      "title": "Python for Everybody Specialization",
+      "subtitle": "Coursera / University of Michigan",
+      "location": "",
+      "date_start": "2021",
+      "date_end": "2021",
+      "description": "5-course specialization covering Python fundamentals, data structures, web scraping, databases, and data visualization with Python.",
+      "order": 1,
+      "is_active": true
+    }
+  }
+]
