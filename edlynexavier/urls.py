@@ -47,7 +47,7 @@ urlpatterns = [
 # ── URLs avec préfixe i18n (/fr/, /en/) ──────────────────────────────────────
 urlpatterns += i18n_patterns(
     # Admin Django
-    path('admin/', admin.site.urls),
+    path('basethed/', admin.site.urls),
 
     # Pages principales
     path('', include('core.urls', namespace='core')),
