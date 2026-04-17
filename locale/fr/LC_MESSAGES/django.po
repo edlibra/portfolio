@@ -49,7 +49,7 @@ msgid "Development"
 msgstr "Développement"
 
 msgid "Building"
-msgstr "Construction"
+msgstr "Innovation"
 
 msgid "Electronic Engineering Technology student & web developer crafting purposeful digital systems — from circuits to full-stack applications. Based in Canada. Thinking globally."
 msgstr "Étudiant en technologie du génie électronique et développeur web, je conçois des systèmes numériques utiles — des circuits aux applications full-stack. Basé au Canada. Ambition mondiale."
