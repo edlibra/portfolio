@@ -94,31 +94,13 @@ TEMPLATES = [
 # DATABASE
 # ─────────────────────────────────────────────────────────────────────────────
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
-
-if DATABASE_URL:
-    import dj_database_url
-    DATABASES = {'default': dj_database_url.parse(DATABASE_URL)}
-elif os.environ.get('DB_NAME'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('DB_NAME'),
-            'USER': os.environ.get('DB_USER', ''),
-            'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-            'HOST': os.environ.get('DB_HOST', 'localhost'),
-            'PORT': os.environ.get('DB_PORT', '5432'),
-        }
+# Détection environnement Render
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.environ.get("SQLITE_PATH", str(BASE_DIR / "db.sqlite3")),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-
-
+}
 # ─────────────────────────────────────────────────────────────────────────────
 # INTERNATIONALISATION — FR par défaut, EN disponible
 # ─────────────────────────────────────────────────────────────────────────────
