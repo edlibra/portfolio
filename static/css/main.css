@@ -1299,46 +1299,82 @@ textarea.form-control { resize: vertical; min-height: 130px; }
 
 /* code pour update nav avec flag */
 .nav-lang-switcher {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.lang-switcher {
-  display: flex;
+.lang-dropdown {
+  position: relative;
+}
+
+.lang-dropdown-toggle {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  min-width: 180px;
+  background: #08152f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 0.4rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  display: none;
+  z-index: 1050;
+}
+
+.lang-dropdown.open .lang-dropdown-menu {
+  display: block;
 }
 
 .lang-form {
   margin: 0;
 }
 
-.lang-btn,
-.lang-active {
-  display: inline-flex;
+.lang-dropdown-item {
+  width: 100%;
+  display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.35rem 0.55rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  line-height: 1;
-}
-
-.lang-btn {
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  gap: 0.65rem;
+  padding: 0.7rem 0.8rem;
+  border: none;
   background: transparent;
-  color: inherit;
+  color: #fff;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  text-align: left;
+  transition: background 0.2s ease;
 }
 
-.lang-btn:hover {
+.lang-dropdown-item:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.lang-active {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
+.lang-dropdown-item.active {
+  background: rgba(255, 255, 255, 0.08);
+  opacity: 0.7;
+  cursor: default;
+}
+
+.lang-dropdown-item:disabled {
+  pointer-events: none;
 }
 
 .lang-flag {
@@ -1346,29 +1382,36 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   height: 12px;
   object-fit: cover;
   border-radius: 2px;
-  display: inline-block;
   flex-shrink: 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  display: inline-block;
 }
 
 .lang-label {
+  font-size: 0.92rem;
   font-weight: 600;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.lang-caret {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-left: 0.1rem;
 }
 
 @media (max-width: 768px) {
-  .lang-btn,
-  .lang-active {
-    padding: 0.3rem 0.45rem;
+  .lang-dropdown-toggle {
+    padding: 0.42rem 0.7rem;
   }
 
-  .lang-flag {
-    width: 16px;
-    height: 11px;
+  .lang-dropdown-menu {
+    min-width: 160px;
+  }
+
+  .lang-dropdown-item {
+    padding: 0.65rem 0.7rem;
   }
 
   .lang-label {
-    font-size: 0.78rem;
+    font-size: 0.86rem;
   }
 }

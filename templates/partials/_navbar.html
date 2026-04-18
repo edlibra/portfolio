@@ -41,40 +41,58 @@
           </li>
 
           {# ── Sélecteur de langue ─────────────────────────────────────── #}
+          {% load static i18n %}
+
           <li class="nav-item nav-lang-switcher">
             {% get_current_language as CURRENT_LANG %}
             {% get_available_languages as LANGUAGES_LIST %}
 
-            <div class="lang-switcher" role="navigation" aria-label="{% trans 'Switch language' %}">
-              {% for lang_code, lang_name in LANGUAGES_LIST %}
-                {% if lang_code != CURRENT_LANG %}
-                  <form action="{% url 'set_language' %}" method="post" class="lang-form">
-                    {% csrf_token %}
-                    <input type="hidden" name="language" value="{{ lang_code }}">
-                    <input type="hidden" name="next" value="{{ request.get_full_path }}">
-
-                    <button type="submit" class="lang-btn" title="{{ lang_name }}" aria-label="{{ lang_name }}">
-                      {% if lang_code == 'fr' %}
-                        <img src="{% static 'flags/fr.svg' %}" alt="Français" class="lang-flag">
-                        <span class="lang-label">FR</span>
-                      {% elif lang_code == 'en' %}
-                        <img src="{% static 'flags/gb.svg' %}" alt="English" class="lang-flag">
-                        <span class="lang-label">EN</span>
-                      {% endif %}
-                    </button>
-                  </form>
-                {% endif %}
-              {% endfor %}
-
-              <span class="lang-active" aria-current="true">
+            <div class="lang-dropdown">
+              <button
+                type="button"
+                class="lang-dropdown-toggle"
+                aria-expanded="false"
+                aria-label="{% trans 'Switch language' %}"
+                id="langDropdownToggle"
+              >
                 {% if CURRENT_LANG == 'fr' %}
                   <img src="{% static 'flags/fr.svg' %}" alt="Français" class="lang-flag">
                   <span class="lang-label">FR</span>
                 {% elif CURRENT_LANG == 'en' %}
                   <img src="{% static 'flags/gb.svg' %}" alt="English" class="lang-flag">
                   <span class="lang-label">EN</span>
+                {% else %}
+                  <img src="{% static 'flags/gb.svg' %}" alt="Language" class="lang-flag">
+                  <span class="lang-label">{{ CURRENT_LANG|upper }}</span>
                 {% endif %}
-              </span>
+                <span class="lang-caret">▾</span>
+              </button>
+
+              <div class="lang-dropdown-menu" id="langDropdownMenu">
+                {% for lang_code, lang_name in LANGUAGES_LIST %}
+                  <form action="{% url 'set_language' %}" method="post" class="lang-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="language" value="{{ lang_code }}">
+                    <input type="hidden" name="next" value="{{ request.get_full_path }}">
+
+                    <button
+                      type="submit"
+                      class="lang-dropdown-item {% if lang_code == CURRENT_LANG %}active{% endif %}"
+                      {% if lang_code == CURRENT_LANG %}disabled{% endif %}
+                    >
+                      {% if lang_code == 'fr' %}
+                        <img src="{% static 'flags/fr.svg' %}" alt="Français" class="lang-flag">
+                        <span class="lang-label">Français</span>
+                      {% elif lang_code == 'en' %}
+                        <img src="{% static 'flags/gb.svg' %}" alt="English" class="lang-flag">
+                        <span class="lang-label">English</span>
+                      {% else %}
+                        <span class="lang-label">{{ lang_name }}</span>
+                      {% endif %}
+                    </button>
+                  </form>
+                {% endfor %}
+              </div>
             </div>
           </li>
 

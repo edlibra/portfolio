@@ -89,6 +89,30 @@
   <link rel="stylesheet" href="{% static 'css/main.css' %}" />
 
   {% block extra_css %}{% endblock %}
+  <!-- block js pour lang switching -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdown = document.querySelector(".lang-dropdown");
+      const toggle = document.getElementById("langDropdownToggle");
+
+      if (!dropdown || !toggle) return;
+
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        dropdown.classList.toggle("open");
+
+        const expanded = dropdown.classList.contains("open");
+        toggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+      });
+
+      document.addEventListener("click", function (e) {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  </script>
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
