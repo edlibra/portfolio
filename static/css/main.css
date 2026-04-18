@@ -1295,3 +1295,80 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   width: 1px; height: 14px; background: var(--clr-border);
   margin-right: 4px; vertical-align: middle;
 }
+
+
+/* code pour update nav avec flag */
+.nav-lang-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-form {
+  margin: 0;
+}
+
+.lang-btn,
+.lang-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.lang-btn {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-active {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.lang-flag {
+  width: 18px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.lang-label {
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .lang-btn,
+  .lang-active {
+    padding: 0.3rem 0.45rem;
+  }
+
+  .lang-flag {
+    width: 16px;
+    height: 11px;
+  }
+
+  .lang-label {
+    font-size: 0.78rem;
+  }
+}
