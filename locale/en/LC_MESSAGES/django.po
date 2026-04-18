@@ -52,7 +52,7 @@ msgid "Building"
 msgstr "Building"
 
 msgid "Electronic Engineering Technology student & web developer crafting purposeful digital systems — from circuits to full-stack applications. Based in Canada. Thinking globally."
-msgstr "Electronic Engineering Technology student & web developer crafting purposeful digital systems — from circuits to full-stack applications. Based in Canada. Thinking globally."
+msgstr "Electronic Engineering student & Web Developer building purposeful digital systems — from hardware circuits to full-stack applications. Based in Canada, thinking globally."
 
 msgid "View Projects"
 msgstr "View Projects"
@@ -173,9 +173,6 @@ msgstr "The story behind the code."
 msgid "My Story"
 msgstr "My Story"
 
-msgid "What I Build"
-msgstr "What I Build"
-
 msgid "My Journey"
 msgstr "My Journey"
 
@@ -272,8 +269,6 @@ msgid "Developer Experience"
 msgstr "Developer Experience"
 
 # ── Contact page ──────────────────────────────────────────────────────────────
-msgid "Get in Touch"
-msgstr "Get in Touch"
 
 msgid "Have a project, opportunity, or question? I'd love to hear from you."
 msgstr "Have a project, opportunity, or question? I'd love to hear from you."

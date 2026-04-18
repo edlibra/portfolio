@@ -57,12 +57,6 @@ msgstr "Étudiant en technologie du génie électronique et développeur web, je
 msgid "View Projects"
 msgstr "Voir les projets"
 
-msgid "Get in Touch"
-msgstr "Me contacter"
-
-msgid "Download CV"
-msgstr "Télécharger le CV"
-
 msgid "Years coding"
 msgstr "Ans de code"
 
@@ -175,9 +169,6 @@ msgstr "Télécharger le CV"
 
 msgid "My Story"
 msgstr "Mon parcours"
-
-msgid "What I Build"
-msgstr "Ce que je construis"
 
 msgid "My Journey"
 msgstr "Mon chemin"
@@ -406,9 +397,6 @@ msgstr "Auteur"
 
 msgid "Completed"
 msgstr "Terminé"
-
-msgid "In Progress"
-msgstr "En cours"
 
 msgid "Archived"
 msgstr "Archivé"
